@@ -73,6 +73,16 @@ nav.scrolled { box-shadow: 0 2px 30px rgba(0,0,0,0.06); }
 }
 .nav-cta:hover { background: var(--teal-light) !important; transform: translateY(-1px); }
 
+.lang-toggle {
+  background: transparent; color: var(--text);
+  border: 1.5px solid var(--border);
+  padding: 0.35rem 0.85rem; border-radius: 100px;
+  font-size: 0.78rem; font-weight: 700; cursor: pointer;
+  transition: all 0.2s; letter-spacing: 0.05em;
+  font-family: inherit; white-space: nowrap;
+}
+.lang-toggle:hover { border-color: var(--teal); color: var(--teal); }
+
 .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
 .mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--dark); margin: 5px 0; transition: all 0.3s; border-radius: 2px; }
 
@@ -529,12 +539,13 @@ footer {
       </div>
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#levels">Pathway</a></li>
-      <li><a href="#programs">Programmes</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#why">Why Koven</a></li>
-      <li><a href="#contact" class="nav-cta">Enrol Now</a></li>
+      <li><a href="#levels" data-en="Pathway" data-el="Πορεία">Pathway</a></li>
+      <li><a href="#programs" data-en="Programmes" data-el="Προγράμματα">Programmes</a></li>
+      <li><a href="#about" data-en="About" data-el="Σχετικά">About</a></li>
+      <li><a href="#why" data-en="Why Koven" data-el="Γιατί Koven">Why Koven</a></li>
+      <li><a href="#contact" class="nav-cta" data-en="Enrol Now" data-el="Εγγραφή">Enrol Now</a></li>
     </ul>
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language">ΕΛ</button>
     <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -545,43 +556,43 @@ footer {
 <section class="hero" id="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-badge fade-up">Now Enrolling — September 2026</div>
-      <h1 class="fade-up stagger-1">A Living Connection<br>to <em>English</em></h1>
-      <p class="hero-desc fade-up stagger-2">Cambridge-accredited English language education in the heart of Nicosia. Small classes, native teachers, and a curriculum that takes students from first words to IELTS mastery.</p>
+      <div class="hero-badge fade-up" data-en="Now Enrolling — September 2026" data-el="Εγγραφές Ανοιχτές — Σεπτέμβριος 2026">Now Enrolling — September 2026</div>
+      <h1 class="fade-up stagger-1" data-en="A Living Connection&lt;br&gt;to &lt;em&gt;English&lt;/em&gt;" data-el="Μια Ζωντανή Σύνδεση&lt;br&gt;με τα &lt;em&gt;Αγγλικά&lt;/em&gt;">A Living Connection<br>to <em>English</em></h1>
+      <p class="hero-desc fade-up stagger-2" data-en="Cambridge-accredited English language education in the heart of Nicosia. Small classes, native teachers, and a curriculum that takes students from first words to IELTS mastery." data-el="Πιστοποιημένη εκπαίδευση Αγγλικών Cambridge στην καρδιά της Λευκωσίας. Μικρά τμήματα, φυσικοί ομιλητές, και πρόγραμμα σπουδών από τα πρώτα βήματα μέχρι την κατάκτηση του IELTS.">Cambridge-accredited English language education in the heart of Nicosia. Small classes, native teachers, and a curriculum that takes students from first words to IELTS mastery.</p>
       <div class="hero-actions fade-up stagger-3">
         <a href="#contact" class="btn-primary">
-          Get Started
+          <span data-en="Get Started" data-el="Ξεκινήστε">Get Started</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="#programs" class="btn-secondary">
+        <a href="#programs" class="btn-secondary" data-en="View Programmes" data-el="Δείτε τα Προγράμματα">
           View Programmes
         </a>
       </div>
     </div>
     <div class="hero-visual fade-up stagger-2">
       <div class="hero-card">
-        <div class="hero-float-1">🇬🇧 Native Teachers</div>
+        <div class="hero-float-1" data-en="🇬🇧 Native Teachers" data-el="🇬🇧 Φυσικοί Ομιλητές">🇬🇧 Native Teachers</div>
         <div class="hero-card-header">
           <div class="hero-card-icon">
             <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <div>
-            <div class="hero-card-title">Cambridge English Pathway</div>
-            <div class="hero-card-sub">Ages 6 to adult · All levels</div>
+            <div class="hero-card-title" data-en="Cambridge English Pathway" data-el="Πορεία Cambridge English">Cambridge English Pathway</div>
+            <div class="hero-card-sub" data-en="Ages 6 to adult · All levels" data-el="Ηλικίες 6 έως ενήλικες · Όλα τα επίπεδα">Ages 6 to adult · All levels</div>
           </div>
         </div>
         <div class="hero-stats">
           <div class="hero-stat">
             <div class="hero-stat-num">10</div>
-            <div class="hero-stat-label">Max Class<br>Size</div>
+            <div class="hero-stat-label" data-en="Max Class&lt;br&gt;Size" data-el="Μέγιστο&lt;br&gt;Τμήμα">Max Class<br>Size</div>
           </div>
           <div class="hero-stat">
             <div class="hero-stat-num">6+</div>
-            <div class="hero-stat-label">Years<br>Teaching</div>
+            <div class="hero-stat-label" data-en="Years&lt;br&gt;Teaching" data-el="Χρόνια&lt;br&gt;Διδασκαλίας">Years<br>Teaching</div>
           </div>
           <div class="hero-stat">
             <div class="hero-stat-num">7</div>
-            <div class="hero-stat-label">Cambridge<br>Levels</div>
+            <div class="hero-stat-label" data-en="Cambridge&lt;br&gt;Levels" data-el="Επίπεδα&lt;br&gt;Cambridge">Cambridge<br>Levels</div>
           </div>
         </div>
         <div class="hero-levels">
@@ -602,19 +613,19 @@ footer {
   <div class="stats-strip-inner">
     <div class="fade-up">
       <div class="strip-stat-num">10</div>
-      <div class="strip-stat-label">Maximum students per class</div>
+      <div class="strip-stat-label" data-en="Maximum students per class" data-el="Μέγιστος αριθμός μαθητών ανά τμήμα">Maximum students per class</div>
     </div>
     <div class="fade-up stagger-1">
       <div class="strip-stat-num">6–16</div>
-      <div class="strip-stat-label">Age range for group classes</div>
+      <div class="strip-stat-label" data-en="Age range for group classes" data-el="Ηλικιακό εύρος ομαδικών τμημάτων">Age range for group classes</div>
     </div>
     <div class="fade-up stagger-2">
       <div class="strip-stat-num">100%</div>
-      <div class="strip-stat-label">Native English teachers</div>
+      <div class="strip-stat-label" data-en="Native English teachers" data-el="Φυσικοί ομιλητές Αγγλικών">Native English teachers</div>
     </div>
     <div class="fade-up stagger-3">
       <div class="strip-stat-num">7</div>
-      <div class="strip-stat-label">Cambridge exam levels offered</div>
+      <div class="strip-stat-label" data-en="Cambridge exam levels offered" data-el="Επίπεδα εξετάσεων Cambridge">Cambridge exam levels offered</div>
     </div>
   </div>
 </div>
@@ -622,9 +633,9 @@ footer {
 <!-- CAMBRIDGE PATHWAY -->
 <section class="levels" id="levels">
   <div class="levels-header">
-    <div class="section-label fade-up">Cambridge Pathway</div>
-    <h2 class="section-title fade-up stagger-1">Your Journey from<br>Beginner to Advanced</h2>
-    <p class="section-desc fade-up stagger-2">A clear progression through internationally recognised Cambridge English levels.</p>
+    <div class="section-label fade-up" data-en="Cambridge Pathway" data-el="Πορεία Cambridge">Cambridge Pathway</div>
+    <h2 class="section-title fade-up stagger-1" data-en="Your Journey from&lt;br&gt;Beginner to Advanced" data-el="Το Ταξίδι σας από&lt;br&gt;Αρχάριο σε Προχωρημένο">Your Journey from<br>Beginner to Advanced</h2>
+    <p class="section-desc fade-up stagger-2" data-en="A clear progression through internationally recognised Cambridge English levels." data-el="Μια ξεκάθαρη πρόοδος μέσα από διεθνώς αναγνωρισμένα επίπεδα Cambridge English.">A clear progression through internationally recognised Cambridge English levels.</p>
   </div>
   <div class="levels-track fade-up stagger-3">
     <div class="level-node">
@@ -674,27 +685,27 @@ footer {
 <!-- PROGRAMS -->
 <section class="programs" id="programs">
   <div class="programs-header">
-    <div class="section-label fade-up">Our Programmes</div>
-    <h2 class="section-title fade-up stagger-1">Programmes for Every<br>Stage of Learning</h2>
-    <p class="section-desc fade-up stagger-2">From first steps in English to university-level preparation, we offer structured pathways for children, teens, and adults.</p>
+    <div class="section-label fade-up" data-en="Our Programmes" data-el="Τα Προγράμματά μας">Our Programmes</div>
+    <h2 class="section-title fade-up stagger-1" data-en="Programmes for Every&lt;br&gt;Stage of Learning" data-el="Προγράμματα για Κάθε&lt;br&gt;Στάδιο Μάθησης">Programmes for Every<br>Stage of Learning</h2>
+    <p class="section-desc fade-up stagger-2" data-en="From first steps in English to university-level preparation, we offer structured pathways for children, teens, and adults." data-el="Από τα πρώτα βήματα στα Αγγλικά μέχρι την προετοιμασία πανεπιστημιακού επιπέδου, προσφέρουμε δομημένες πορείες για παιδιά, εφήβους και ενήλικες.">From first steps in English to university-level preparation, we offer structured pathways for children, teens, and adults.</p>
   </div>
   <div class="programs-grid">
     <div class="program-card fade-up">
       <div class="program-icon">🌱</div>
-      <h3>Pre-Junior</h3>
+      <h3 data-en="Pre-Junior" data-el="Pre-Junior">Pre-Junior</h3>
       <div class="program-age">Ages 6–7</div>
-      <p>First Steps to English — a gentle introduction to the language through play, songs, and interactive activities designed for primary school beginners.</p>
+      <p data-en="First Steps to English — a gentle introduction to the language through play, songs, and interactive activities designed for primary school beginners." data-el="Πρώτα Βήματα στα Αγγλικά — μια ήπια εισαγωγή στη γλώσσα μέσα από παιχνίδι, τραγούδια και διαδραστικές δραστηριότητες για μαθητές πρώτης τάξης δημοτικού.">First Steps to English — a gentle introduction to the language through play, songs, and interactive activities designed for primary school beginners.</p>
       <div class="program-tags">
-        <span class="program-tag">Speaking</span>
-        <span class="program-tag">Listening</span>
-        <span class="program-tag">Songs & Games</span>
+        <span class="program-tag" data-en="Speaking" data-el="Ομιλία">Speaking</span>
+        <span class="program-tag" data-en="Listening" data-el="Ακουστική">Listening</span>
+        <span class="program-tag" data-en="Songs &amp; Games" data-el="Τραγούδια &amp; Παιχνίδια">Songs &amp; Games</span>
       </div>
     </div>
     <div class="program-card fade-up stagger-1">
       <div class="program-icon">📚</div>
-      <h3>Cambridge Young Learners</h3>
+      <h3 data-en="Cambridge Young Learners" data-el="Cambridge Young Learners">Cambridge Young Learners</h3>
       <div class="program-age">Ages 7–12</div>
-      <p>Group classes following the Cambridge English curriculum — Starters, Movers, and Flyers — building a strong foundation in reading, writing, speaking, and listening.</p>
+      <p data-en="Group classes following the Cambridge English curriculum — Starters, Movers, and Flyers — building a strong foundation in reading, writing, speaking, and listening." data-el="Ομαδικά τμήματα που ακολουθούν το πρόγραμμα Cambridge English — Starters, Movers και Flyers — χτίζοντας γερές βάσεις στην ανάγνωση, γραφή, ομιλία και ακουστική κατανόηση.">Group classes following the Cambridge English curriculum — Starters, Movers, and Flyers — building a strong foundation in reading, writing, speaking, and listening.</p>
       <div class="program-tags">
         <span class="program-tag">Starters</span>
         <span class="program-tag">Movers</span>
@@ -703,9 +714,9 @@ footer {
     </div>
     <div class="program-card fade-up stagger-2">
       <div class="program-icon">🎯</div>
-      <h3>Cambridge Exams</h3>
+      <h3 data-en="Cambridge Exams" data-el="Εξετάσεις Cambridge">Cambridge Exams</h3>
       <div class="program-age">Ages 12–16</div>
-      <p>Intensive preparation for KET, PET, and IGCSE examinations. Focused exam technique, academic writing, and advanced grammar skills.</p>
+      <p data-en="Intensive preparation for KET, PET, and IGCSE examinations. Focused exam technique, academic writing, and advanced grammar skills." data-el="Εντατική προετοιμασία για εξετάσεις KET, PET και IGCSE. Τεχνικές εξετάσεων, ακαδημαϊκή γραφή και προχωρημένη γραμματική.">Intensive preparation for KET, PET, and IGCSE examinations. Focused exam technique, academic writing, and advanced grammar skills.</p>
       <div class="program-tags">
         <span class="program-tag">KET</span>
         <span class="program-tag">PET</span>
@@ -714,35 +725,35 @@ footer {
     </div>
     <div class="program-card fade-up stagger-3">
       <div class="program-icon">🏫</div>
-      <h3>School Entry Exam Prep</h3>
+      <h3 data-en="School Entry Exam Prep" data-el="Προετοιμασία Εισαγωγικών Εξετάσεων">School Entry Exam Prep</h3>
       <div class="program-age">All ages</div>
-      <p>Tailored preparation for entry exams into private English schools across Cyprus, including mathematics exam preparation available as private or group lessons.</p>
+      <p data-en="Tailored preparation for entry exams into private English schools across Cyprus, including mathematics exam preparation available as private or group lessons." data-el="Εξατομικευμένη προετοιμασία για εισαγωγικές εξετάσεις σε ιδιωτικά αγγλόφωνα σχολεία της Κύπρου, συμπεριλαμβανομένης προετοιμασίας μαθηματικών σε ιδιαίτερα ή ομαδικά μαθήματα.">Tailored preparation for entry exams into private English schools across Cyprus, including mathematics exam preparation available as private or group lessons.</p>
       <div class="program-tags">
-        <span class="program-tag">English</span>
-        <span class="program-tag">Maths</span>
-        <span class="program-tag">Interview Prep</span>
+        <span class="program-tag" data-en="English" data-el="Αγγλικά">English</span>
+        <span class="program-tag" data-en="Maths" data-el="Μαθηματικά">Maths</span>
+        <span class="program-tag" data-en="Interview Prep" data-el="Προετοιμασία Συνέντευξης">Interview Prep</span>
       </div>
     </div>
     <div class="program-card fade-up stagger-4">
       <div class="program-icon">✈️</div>
-      <h3>IELTS Preparation</h3>
+      <h3 data-en="IELTS Preparation" data-el="Προετοιμασία IELTS">IELTS Preparation</h3>
       <div class="program-age">Teens & Adults</div>
-      <p>Comprehensive IELTS preparation for university admissions and professional development. Covers all four components with practice exams and personalised feedback.</p>
+      <p data-en="Comprehensive IELTS preparation for university admissions and professional development. Covers all four components with practice exams and personalised feedback." data-el="Ολοκληρωμένη προετοιμασία IELTS για πανεπιστημιακές εισαγωγές και επαγγελματική ανάπτυξη. Καλύπτει και τις τέσσερις ενότητες με δοκιμαστικές εξετάσεις και εξατομικευμένη ανατροφοδότηση.">Comprehensive IELTS preparation for university admissions and professional development. Covers all four components with practice exams and personalised feedback.</p>
       <div class="program-tags">
-        <span class="program-tag">Academic</span>
-        <span class="program-tag">General</span>
-        <span class="program-tag">Mock Exams</span>
+        <span class="program-tag" data-en="Academic" data-el="Ακαδημαϊκά">Academic</span>
+        <span class="program-tag" data-en="General" data-el="Γενικά">General</span>
+        <span class="program-tag" data-en="Mock Exams" data-el="Δοκιμαστικές Εξετάσεις">Mock Exams</span>
       </div>
     </div>
     <div class="program-card fade-up stagger-5">
       <div class="program-icon">👤</div>
-      <h3>Private & Adult Lessons</h3>
+      <h3 data-en="Private &amp; Adult Lessons" data-el="Ιδιαίτερα &amp; Μαθήματα Ενηλίκων">Private & Adult Lessons</h3>
       <div class="program-age">All ages</div>
-      <p>One-to-one or small group lessons tailored to your level and goals. Perfect for adults, professionals, or students needing focused individual attention.</p>
+      <p data-en="One-to-one or small group lessons tailored to your level and goals. Perfect for adults, professionals, or students needing focused individual attention." data-el="Ιδιαίτερα ή μαθήματα σε μικρές ομάδες προσαρμοσμένα στο επίπεδο και τους στόχους σας. Ιδανικά για ενήλικες, επαγγελματίες ή μαθητές που χρειάζονται εξατομικευμένη προσοχή.">One-to-one or small group lessons tailored to your level and goals. Perfect for adults, professionals, or students needing focused individual attention.</p>
       <div class="program-tags">
-        <span class="program-tag">1-on-1</span>
-        <span class="program-tag">Flexible Schedule</span>
-        <span class="program-tag">Custom Plan</span>
+        <span class="program-tag" data-en="1-on-1" data-el="1 προς 1">1-on-1</span>
+        <span class="program-tag" data-en="Flexible Schedule" data-el="Ευέλικτο Πρόγραμμα">Flexible Schedule</span>
+        <span class="program-tag" data-en="Custom Plan" data-el="Εξατομικευμένο Πλάνο">Custom Plan</span>
       </div>
     </div>
   </div>
@@ -752,38 +763,38 @@ footer {
 <section class="about" id="about">
   <div class="about-inner">
     <div>
-      <div class="section-label fade-up">About Us</div>
-      <h2 class="section-title fade-up stagger-1">Where English<br>Comes Alive</h2>
-      <p class="section-desc fade-up stagger-2">Koven Institute of English is dedicated to creating an interactive and friendly environment where students of all ages build genuine confidence in English. Based in Makedonitissa, Nicosia, we follow the Cambridge English curriculum with experienced native-speaking teachers.</p>
+      <div class="section-label fade-up" data-en="About Us" data-el="Σχετικά με Εμάς">About Us</div>
+      <h2 class="section-title fade-up stagger-1" data-en="Where English&lt;br&gt;Comes Alive" data-el="Εκεί που τα Αγγλικά&lt;br&gt;Ζωντανεύουν">Where English<br>Comes Alive</h2>
+      <p class="section-desc fade-up stagger-2" data-en="Koven Institute of English is dedicated to creating an interactive and friendly environment where students of all ages build genuine confidence in English. Based in Makedonitissa, Nicosia, we follow the Cambridge English curriculum with experienced native-speaking teachers." data-el="Το Koven Institute of English είναι αφιερωμένο στη δημιουργία ενός διαδραστικού και φιλικού περιβάλλοντος όπου μαθητές όλων των ηλικιών αποκτούν πραγματική αυτοπεποίθηση στα Αγγλικά. Με έδρα τη Μακεδονίτισσα, Λευκωσία, ακολουθούμε το πρόγραμμα Cambridge English με έμπειρους φυσικούς ομιλητές.">Koven Institute of English is dedicated to creating an interactive and friendly environment where students of all ages build genuine confidence in English. Based in Makedonitissa, Nicosia, we follow the Cambridge English curriculum with experienced native-speaking teachers.</p>
       <div class="about-features">
         <div class="about-feature fade-up stagger-3">
           <div class="about-feature-icon">🎓</div>
           <div>
-            <h4>Cambridge Curriculum</h4>
-            <p>Structured progression from Starters through IGCSE and IELTS, following internationally recognised Cambridge standards.</p>
+            <h4 data-en="Cambridge Curriculum" data-el="Πρόγραμμα Cambridge">Cambridge Curriculum</h4>
+            <p data-en="Structured progression from Starters through IGCSE and IELTS, following internationally recognised Cambridge standards." data-el="Δομημένη πρόοδος από Starters μέσα από IGCSE και IELTS, σύμφωνα με τα διεθνώς αναγνωρισμένα πρότυπα Cambridge.">Structured progression from Starters through IGCSE and IELTS, following internationally recognised Cambridge standards.</p>
           </div>
         </div>
         <div class="about-feature fade-up stagger-4">
           <div class="about-feature-icon">👥</div>
           <div>
-            <h4>Small Group Sizes</h4>
-            <p>Maximum 10 students per class ensures every student receives individual attention and plenty of speaking practice.</p>
+            <h4 data-en="Small Group Sizes" data-el="Μικρά Τμήματα">Small Group Sizes</h4>
+            <p data-en="Maximum 10 students per class ensures every student receives individual attention and plenty of speaking practice." data-el="Μέγιστο 10 μαθητές ανά τμήμα εξασφαλίζει ατομική προσοχή και άφθονη εξάσκηση στην ομιλία.">Maximum 10 students per class ensures every student receives individual attention and plenty of speaking practice.</p>
           </div>
         </div>
         <div class="about-feature fade-up stagger-5">
           <div class="about-feature-icon">💡</div>
           <div>
-            <h4>Interactive Learning</h4>
-            <p>Every classroom equipped with projectors and interactive software for engaging, modern English instruction.</p>
+            <h4 data-en="Interactive Learning" data-el="Διαδραστική Μάθηση">Interactive Learning</h4>
+            <p data-en="Every classroom equipped with projectors and interactive software for engaging, modern English instruction." data-el="Κάθε αίθουσα εξοπλισμένη με προβολείς και διαδραστικό λογισμικό για σύγχρονη διδασκαλία.">Every classroom equipped with projectors and interactive software for engaging, modern English instruction.</p>
           </div>
         </div>
       </div>
     </div>
     <div class="about-visual fade-up stagger-2">
       <div class="about-image-grid">
-        <div class="about-img"><div class="about-img-placeholder" style="background: linear-gradient(135deg, #1B6B5A, #238C75); color: white; font-size: 1rem; font-family: 'DM Serif Display', serif;">Classroom Learning</div></div>
-        <div class="about-img"><div class="about-img-placeholder" style="background: linear-gradient(135deg, #C8963E, #D4A855); color: white; font-size: 1rem; font-family: 'DM Serif Display', serif;">Group Activities</div></div>
-        <div class="about-img"><div class="about-img-placeholder" style="background: linear-gradient(135deg, #E07A5F, #E8927D); color: white; font-size: 1rem; font-family: 'DM Serif Display', serif;">Creative Projects</div></div>
+        <div class="about-img"><div class="about-img-placeholder" style="background: linear-gradient(135deg, #1B6B5A, #238C75); color: white; font-size: 1rem; font-family: 'DM Serif Display', serif;" data-en="Classroom Learning" data-el="Μάθηση στην Τάξη">Classroom Learning</div></div>
+        <div class="about-img"><div class="about-img-placeholder" style="background: linear-gradient(135deg, #C8963E, #D4A855); color: white; font-size: 1rem; font-family: 'DM Serif Display', serif;" data-en="Group Activities" data-el="Ομαδικές Δραστηριότητες">Group Activities</div></div>
+        <div class="about-img"><div class="about-img-placeholder" style="background: linear-gradient(135deg, #E07A5F, #E8927D); color: white; font-size: 1rem; font-family: 'DM Serif Display', serif;" data-en="Creative Projects" data-el="Δημιουργικά Projects">Creative Projects</div></div>
       </div>
     </div>
   </div>
@@ -793,41 +804,41 @@ footer {
 <section class="why" id="why">
   <div class="why-inner">
     <div>
-      <div class="section-label fade-up">Why Koven</div>
-      <h2 class="section-title fade-up stagger-1">More Than Just<br>an English School</h2>
-      <p class="section-desc fade-up stagger-2">We create an environment where students don't just learn English — they live it.</p>
+      <div class="section-label fade-up" data-en="Why Koven" data-el="Γιατί Koven">Why Koven</div>
+      <h2 class="section-title fade-up stagger-1" data-en="More Than Just&lt;br&gt;an English School" data-el="Περισσότερο από ένα&lt;br&gt;Φροντιστήριο Αγγλικών">More Than Just<br>an English School</h2>
+      <p class="section-desc fade-up stagger-2" data-en="We create an environment where students don't just learn English — they live it." data-el="Δημιουργούμε ένα περιβάλλον όπου οι μαθητές δεν μαθαίνουν απλώς Αγγλικά — τα ζουν.">We create an environment where students don't just learn English — they live it.</p>
       <div class="why-items">
         <div class="why-item fade-up stagger-3">
           <div class="why-item-num">01</div>
           <div>
-            <h4>Native English Teachers</h4>
-            <p>All our classes are taught by experienced, native English-speaking teachers who bring authentic language and culture into every lesson.</p>
+            <h4 data-en="Native English Teachers" data-el="Φυσικοί Ομιλητές Αγγλικών">Native English Teachers</h4>
+            <p data-en="All our classes are taught by experienced, native English-speaking teachers who bring authentic language and culture into every lesson." data-el="Όλα τα τμήματά μας διδάσκονται από έμπειρους, φυσικούς ομιλητές Αγγλικών που φέρνουν αυθεντική γλώσσα και κουλτούρα σε κάθε μάθημα.">All our classes are taught by experienced, native English-speaking teachers who bring authentic language and culture into every lesson.</p>
           </div>
         </div>
         <div class="why-item fade-up stagger-4">
           <div class="why-item-num">02</div>
           <div>
-            <h4>Personalised Attention</h4>
-            <p>With a maximum of 10 students per class, every student gets the time and support they need to thrive.</p>
+            <h4 data-en="Personalised Attention" data-el="Εξατομικευμένη Προσοχή">Personalised Attention</h4>
+            <p data-en="With a maximum of 10 students per class, every student gets the time and support they need to thrive." data-el="Με μέγιστο 10 μαθητές ανά τμήμα, κάθε μαθητής λαμβάνει τον χρόνο και την υποστήριξη που χρειάζεται.">With a maximum of 10 students per class, every student gets the time and support they need to thrive.</p>
           </div>
         </div>
         <div class="why-item fade-up stagger-5">
           <div class="why-item-num">03</div>
           <div>
-            <h4>Proven Results</h4>
-            <p>Our students consistently achieve excellent results in Cambridge exams, private school entries, and IELTS assessments.</p>
+            <h4 data-en="Proven Results" data-el="Αποδεδειγμένα Αποτελέσματα">Proven Results</h4>
+            <p data-en="Our students consistently achieve excellent results in Cambridge exams, private school entries, and IELTS assessments." data-el="Οι μαθητές μας πετυχαίνουν σταθερά εξαιρετικά αποτελέσματα σε εξετάσεις Cambridge, εισαγωγές σε σχολεία και IELTS.">Our students consistently achieve excellent results in Cambridge exams, private school entries, and IELTS assessments.</p>
           </div>
         </div>
       </div>
     </div>
     <div class="why-visual fade-up stagger-3">
       <div class="why-testimonial">
-        <div class="why-quote">My daughter went from being shy about speaking English to confidently presenting in front of her class. The change has been remarkable.</div>
+        <div class="why-quote" data-en="My daughter went from being shy about speaking English to confidently presenting in front of her class. The change has been remarkable." data-el="Η κόρη μου από ντροπαλή στα Αγγλικά, τώρα παρουσιάζει με αυτοπεποίθηση μπροστά σε όλη την τάξη. Η αλλαγή ήταν εντυπωσιακή.">My daughter went from being shy about speaking English to confidently presenting in front of her class. The change has been remarkable.</div>
         <div class="why-author">
           <div class="why-author-avatar">⭐</div>
           <div>
-            <div class="why-author-name">Parent Testimonial</div>
-            <div class="why-author-role">Koven student family</div>
+            <div class="why-author-name" data-en="Parent Testimonial" data-el="Μαρτυρία Γονέα">Parent Testimonial</div>
+            <div class="why-author-role" data-en="Koven student family" data-el="Οικογένεια μαθητή Koven">Koven student family</div>
           </div>
         </div>
       </div>
@@ -835,11 +846,11 @@ footer {
         <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
           <span style="font-size: 1.5rem;">👨‍👩‍👧‍👦</span>
           <div>
-            <div style="color: var(--gold); font-weight: 700; font-size: 0.85rem;">SIBLING DISCOUNT</div>
-            <div style="color: rgba(255,255,255,0.5); font-size: 0.8rem;">Special rates for families</div>
+            <div style="color: var(--gold); font-weight: 700; font-size: 0.85rem;" data-en="SIBLING DISCOUNT" data-el="ΕΚΠΤΩΣΗ ΑΔΕΛΦΩΝ">SIBLING DISCOUNT</div>
+            <div style="color: rgba(255,255,255,0.5); font-size: 0.8rem;" data-en="Special rates for families" data-el="Ειδικές τιμές για οικογένειες">Special rates for families</div>
           </div>
         </div>
-        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.5;">We offer special pricing for siblings enrolled together, as well as bundled course packages for multiple subjects.</p>
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.5;" data-en="We offer special pricing for siblings enrolled together, as well as bundled course packages for multiple subjects." data-el="Προσφέρουμε ειδικές τιμές για αδέλφια που εγγράφονται μαζί, καθώς και πακέτα μαθημάτων για πολλαπλά αντικείμενα.">We offer special pricing for siblings enrolled together, as well as bundled course packages for multiple subjects.</p>
       </div>
     </div>
   </div>
@@ -849,21 +860,21 @@ footer {
 <section class="contact" id="contact">
   <div class="contact-inner">
     <div>
-      <div class="section-label fade-up">Get in Touch</div>
-      <h2 class="section-title fade-up stagger-1">Ready to Start<br>Your Journey?</h2>
-      <p class="section-desc fade-up stagger-2">Contact us for a free consultation and placement assessment. We'll find the perfect programme for you or your child.</p>
+      <div class="section-label fade-up" data-en="Get in Touch" data-el="Επικοινωνήστε μαζί μας">Get in Touch</div>
+      <h2 class="section-title fade-up stagger-1" data-en="Ready to Start&lt;br&gt;Your Journey?" data-el="Έτοιμοι να&lt;br&gt;Ξεκινήσετε;">Ready to Start<br>Your Journey?</h2>
+      <p class="section-desc fade-up stagger-2" data-en="Contact us for a free consultation and placement assessment. We'll find the perfect programme for you or your child." data-el="Επικοινωνήστε μαζί μας για δωρεάν συμβουλευτική και αξιολόγηση επιπέδου. Θα βρούμε το ιδανικό πρόγραμμα για εσάς ή το παιδί σας.">Contact us for a free consultation and placement assessment. We'll find the perfect programme for you or your child.</p>
       <div class="contact-info">
         <div class="contact-item fade-up stagger-3">
           <div class="contact-item-icon">📍</div>
           <div>
-            <h4>Visit Us</h4>
+            <h4 data-en="Visit Us" data-el="Επισκεφθείτε μας">Visit Us</h4>
             <p>Likavitou 50A<br>Makedonitissa, Engomi<br>Nicosia 2401, Cyprus</p>
           </div>
         </div>
         <div class="contact-item fade-up stagger-4">
           <div class="contact-item-icon">📞</div>
           <div>
-            <h4>Call Us</h4>
+            <h4 data-en="Call Us" data-el="Καλέστε μας">Call Us</h4>
             <p>
               <a href="tel:+35722357235">+357 22 357 235</a><br>
               <a href="tel:+35799900790">+357 99 900 790</a>
@@ -873,53 +884,53 @@ footer {
         <div class="contact-item fade-up stagger-5">
           <div class="contact-item-icon">💬</div>
           <div>
-            <h4>Follow Us</h4>
+            <h4 data-en="Follow Us" data-el="Ακολουθήστε μας">Follow Us</h4>
             <p><a href="https://www.facebook.com/KovenInstituteofEnglish/" target="_blank">Facebook — Koven Institute</a></p>
           </div>
         </div>
       </div>
     </div>
     <div class="contact-form-wrap fade-up stagger-2">
-      <h3>Send Us a Message</h3>
-      <p>Fill in your details and we'll get back to you within 24 hours.</p>
-      <form onsubmit="event.preventDefault(); alert('Thank you! We will be in touch shortly.'); this.reset();">
+      <h3 data-en="Send Us a Message" data-el="Στείλτε μας Μήνυμα">Send Us a Message</h3>
+      <p data-en="Fill in your details and we'll get back to you within 24 hours." data-el="Συμπληρώστε τα στοιχεία σας και θα επικοινωνήσουμε μαζί σας εντός 24 ωρών.">Fill in your details and we'll get back to you within 24 hours.</p>
+      <form onsubmit="event.preventDefault(); alert(currentLang === 'en' ? 'Thank you! We will be in touch shortly.' : 'Ευχαριστούμε! Θα επικοινωνήσουμε μαζί σας σύντομα.'); this.reset();">
         <div class="form-row">
           <div class="form-group">
-            <label>First Name</label>
-            <input type="text" placeholder="Your first name" required>
+            <label data-en="First Name" data-el="Όνομα">First Name</label>
+            <input type="text" placeholder="Your first name" data-placeholder-en="Your first name" data-placeholder-el="Το όνομά σας" required>
           </div>
           <div class="form-group">
-            <label>Last Name</label>
-            <input type="text" placeholder="Your last name" required>
+            <label data-en="Last Name" data-el="Επώνυμο">Last Name</label>
+            <input type="text" placeholder="Your last name" data-placeholder-en="Your last name" data-placeholder-el="Το επώνυμό σας" required>
           </div>
         </div>
         <div class="form-group">
-          <label>Email</label>
+          <label data-en="Email" data-el="Email">Email</label>
           <input type="email" placeholder="your@email.com" required>
         </div>
         <div class="form-group">
-          <label>Phone</label>
+          <label data-en="Phone" data-el="Τηλέφωνο">Phone</label>
           <input type="tel" placeholder="+357 99 000 000">
         </div>
         <div class="form-group">
-          <label>I'm Interested In</label>
+          <label data-en="I'm Interested In" data-el="Με Ενδιαφέρει">I'm Interested In</label>
           <select required>
-            <option value="" disabled selected>Select a programme</option>
-            <option>Pre-Junior (Ages 6–7)</option>
-            <option>Cambridge Young Learners (Ages 7–12)</option>
-            <option>Cambridge Exams — KET / PET / IGCSE</option>
-            <option>IELTS Preparation</option>
-            <option>School Entry Exam Preparation</option>
-            <option>Private Lessons</option>
-            <option>Adult Lessons</option>
-            <option>Other / General Enquiry</option>
+            <option value="" disabled selected data-en="Select a programme" data-el="Επιλέξτε πρόγραμμα">Select a programme</option>
+            <option data-en="Pre-Junior (Ages 6–7)" data-el="Pre-Junior (Ηλικίες 6–7)">Pre-Junior (Ages 6–7)</option>
+            <option data-en="Cambridge Young Learners (Ages 7–12)" data-el="Cambridge Young Learners (Ηλικίες 7–12)">Cambridge Young Learners (Ages 7–12)</option>
+            <option data-en="Cambridge Exams — KET / PET / IGCSE" data-el="Εξετάσεις Cambridge — KET / PET / IGCSE">Cambridge Exams — KET / PET / IGCSE</option>
+            <option data-en="IELTS Preparation" data-el="Προετοιμασία IELTS">IELTS Preparation</option>
+            <option data-en="School Entry Exam Preparation" data-el="Προετοιμασία Εισαγωγικών Εξετάσεων">School Entry Exam Preparation</option>
+            <option data-en="Private Lessons" data-el="Ιδιαίτερα Μαθήματα">Private Lessons</option>
+            <option data-en="Adult Lessons" data-el="Μαθήματα Ενηλίκων">Adult Lessons</option>
+            <option data-en="Other / General Enquiry" data-el="Άλλο / Γενική Ερώτηση">Other / General Enquiry</option>
           </select>
         </div>
         <div class="form-group">
-          <label>Message</label>
-          <textarea placeholder="Tell us about your goals or any questions you have..."></textarea>
+          <label data-en="Message" data-el="Μήνυμα">Message</label>
+          <textarea placeholder="Tell us about your goals or any questions you have..." data-placeholder-en="Tell us about your goals or any questions you have..." data-placeholder-el="Πείτε μας για τους στόχους σας ή οποιεσδήποτε ερωτήσεις έχετε..."></textarea>
         </div>
-        <button type="submit" class="btn-primary form-submit">Send Message</button>
+        <button type="submit" class="btn-primary form-submit" data-en="Send Message" data-el="Αποστολή">Send Message</button>
       </form>
     </div>
   </div>
@@ -931,7 +942,7 @@ footer {
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3260.5!2d33.345!3d35.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDEwJzEyLjAiTiAzM8KwMjAnNDIuMCJF!5e0!3m2!1sen!2s!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <div class="map-overlay">
       <h4>Koven Institute of English</h4>
-      <p>Likavitou 50A, Makedonitissa<br>Near Makareio Stadium, Nicosia</p>
+      <p data-en="Likavitou 50A, Makedonitissa&lt;br&gt;Near Makareio Stadium, Nicosia" data-el="Likavitou 50A, Makedonitissa&lt;br&gt;Κοντά στο Μακάρειο Στάδιο, Λευκωσία">Likavitou 50A, Makedonitissa<br>Near Makareio Stadium, Nicosia</p>
     </div>
   </div>
 </div>
@@ -950,29 +961,29 @@ footer {
           <div class="nav-logo-sub" style="color: rgba(255,255,255,0.4);">Institute of English</div>
         </div>
       </a>
-      <p>A living connection to English. Providing quality English language education in Nicosia since our founding, with Cambridge-accredited courses for all ages.</p>
+      <p data-en="A living connection to English. Providing quality English language education in Nicosia since our founding, with Cambridge-accredited courses for all ages." data-el="Μια ζωντανή σύνδεση με τα Αγγλικά. Παρέχουμε ποιοτική εκπαίδευση Αγγλικών στη Λευκωσία, με πιστοποιημένα προγράμματα Cambridge για όλες τις ηλικίες.">A living connection to English. Providing quality English language education in Nicosia since our founding, with Cambridge-accredited courses for all ages.</p>
     </div>
     <div class="footer-col">
-      <h4>Programmes</h4>
+      <h4 data-en="Programmes" data-el="Προγράμματα">Programmes</h4>
       <ul>
-        <li><a href="#programs">Pre-Junior</a></li>
-        <li><a href="#programs">Young Learners</a></li>
-        <li><a href="#programs">Cambridge Exams</a></li>
-        <li><a href="#programs">IELTS</a></li>
-        <li><a href="#programs">Private Lessons</a></li>
+        <li><a href="#programs" data-en="Pre-Junior" data-el="Pre-Junior">Pre-Junior</a></li>
+        <li><a href="#programs" data-en="Young Learners" data-el="Young Learners">Young Learners</a></li>
+        <li><a href="#programs" data-en="Cambridge Exams" data-el="Εξετάσεις Cambridge">Cambridge Exams</a></li>
+        <li><a href="#programs" data-en="IELTS" data-el="IELTS">IELTS</a></li>
+        <li><a href="#programs" data-en="Private Lessons" data-el="Ιδιαίτερα Μαθήματα">Private Lessons</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Quick Links</h4>
+      <h4 data-en="Quick Links" data-el="Γρήγοροι Σύνδεσμοι">Quick Links</h4>
       <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#levels">Levels</a></li>
-        <li><a href="#why">Why Koven</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" data-en="About Us" data-el="Σχετικά με Εμάς">About Us</a></li>
+        <li><a href="#levels" data-en="Levels" data-el="Επίπεδα">Levels</a></li>
+        <li><a href="#why" data-en="Why Koven" data-el="Γιατί Koven">Why Koven</a></li>
+        <li><a href="#contact" data-en="Contact" data-el="Επικοινωνία">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Contact</h4>
+      <h4 data-en="Contact" data-el="Επικοινωνία">Contact</h4>
       <ul>
         <li><a href="tel:+35722357235">+357 22 357 235</a></li>
         <li><a href="tel:+35799900790">+357 99 900 790</a></li>
@@ -982,7 +993,7 @@ footer {
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 Koven Institute of English. All rights reserved.</span>
+    <span data-en="© 2026 Koven Institute of English. All rights reserved." data-el="© 2026 Koven Institute of English. Με επιφύλαξη παντός δικαιώματος.">&copy; 2026 Koven Institute of English. All rights reserved.</span>
     <div class="footer-social">
       <a href="https://www.facebook.com/KovenInstituteofEnglish/" target="_blank" aria-label="Facebook">f</a>
     </div>
@@ -1001,6 +1012,25 @@ const toggle = document.getElementById('mobileToggle');
 const links = document.getElementById('navLinks');
 toggle.addEventListener('click', () => links.classList.toggle('open'));
 links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+// Language toggle
+let currentLang = 'en';
+
+function switchLanguage(lang) {
+  currentLang = lang;
+  document.querySelectorAll('[data-en]').forEach(el => {
+    el.innerHTML = el.dataset[lang];
+  });
+  document.querySelectorAll('[data-placeholder-en]').forEach(el => {
+    el.placeholder = lang === 'en' ? el.dataset.placeholderEn : el.dataset.placeholderEl;
+  });
+  document.getElementById('langToggle').textContent = lang === 'en' ? 'ΕΛ' : 'EN';
+  document.documentElement.lang = lang === 'en' ? 'en' : 'el';
+}
+
+document.getElementById('langToggle').addEventListener('click', () => {
+  switchLanguage(currentLang === 'en' ? 'el' : 'en');
+});
 
 // Fade-up on scroll
 const observer = new IntersectionObserver((entries) => {
